@@ -38,7 +38,7 @@ describe('Testes da função HandlerElephants', () => {
     expect(actual).not.toContain('Monday');
   });
   it('9. Ao chamar a função handlreElephantes com parametro "nome", deve retornar null', () => {
-    const actual = handlerElephants('nome');
+    const actual = handlerElephants('Name');
     expect(actual).toBeNull();
   });
 });
