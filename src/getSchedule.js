@@ -5,19 +5,23 @@ const setCompleteSchedule = (weekDays) => {
 
   weekDays.forEach((day) => {
     if (day === 'Monday') {
-      return newObject[day] = {
-        officeHour: `CLOSED`,
+      newObject[day] = {
+        officeHour: 'CLOSED',
         exhibition: 'The zoo will be closed!',
       };
+      return newObject;
     }
 
-    const availabilityAnimals = data.species.filter((species) => species.availability.includes(day));
-    return newObject[day] = {
+    const availabilityAnimals = data.species.filter((species) => species.availability
+      .includes(day));
+
+    newObject[day] = {
       officeHour: `Open from ${data.hours[day].open}am until ${data.hours[day].close}pm`,
       exhibition: availabilityAnimals.map((animal) => animal.name),
     };
-  });
 
+    return newObject;
+  });
   return newObject;
 };
 
@@ -27,13 +31,13 @@ const getSchedule = (scheduleTarget) => {
 
   if (animals.includes(scheduleTarget)) {
     return data.species
-    .find((species) => species.name === scheduleTarget)
-    .availability;
+      .find((species) => species.name === scheduleTarget)
+      .availability;
   }
-  
+
   if (weekDays.includes(scheduleTarget)) {
     const specificDay = setCompleteSchedule(weekDays);
-    let result = {};
+    const result = {};
     result[scheduleTarget] = specificDay[scheduleTarget];
     return result;
   }
@@ -42,7 +46,5 @@ const getSchedule = (scheduleTarget) => {
     return setCompleteSchedule(weekDays);
   }
 };
-
-console.log(getSchedule('Monday'));
 
 module.exports = getSchedule;
