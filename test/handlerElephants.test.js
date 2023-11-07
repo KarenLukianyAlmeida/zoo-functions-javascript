@@ -25,8 +25,12 @@ describe('Testes da função HandlerElephants', () => {
     const expected = 10.5;
     expect(actual).toBe(expected);
   });
-  it('6. Ao chamar a função handlreElephantes com parametro "name", deve retornar null', () => {
-    const actual = handlerElephants('averageAge');
+  it('6. Ao chamar a função handlreElephantes com parametro "name", deve retornar "elephants"', () => {
+    const actual = handlerElephants('name');
+    expect(actual).toMatch('elephants');
+  });
+  it('7. Ao chamar a função handlreElephantes com parametro "nome", deve retornar null', () => {
+    const actual = handlerElephants('nome');
     expect(actual).toBeNull();
   });
 });
