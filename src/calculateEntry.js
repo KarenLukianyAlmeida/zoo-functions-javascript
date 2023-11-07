@@ -23,25 +23,15 @@ const calculateEntry = (entrants) => {
 
   categorysOfEntarnts.forEach((category) => {
     if (category === 'child') {
-      sum +=  (categorys[category] * 20.99).toFixed(2);
+      sum += (categorys[category] * data.prices.child);
     } else if (category === 'adult') {
-      sum += (categorys[category] * 49.99).toFixed(2);
-    } 
-    sum += (categorys[category] * 24.99).toFixed(2);
+      sum += (categorys[category] * data.prices.adult);
+    } else {
+      sum += (categorys[category] * data.prices.senior);
+    }
+  });
 
-    return sum;
-  })
-
+  return Number(sum.toFixed(2));
 };
-
-const entrants = [
-	{ name:  'Lara Carvalho', age:  5 },
-	{ name:  'Frederico Moreira', age:  5 },
-	{ name:  'Pedro Henrique Carvalho', age:  5 },
-	{ name:  'Maria Costa', age:  18 },
-	{ name:  'Núbia Souza', age:  18 },
-	{ name:  'Carlos Nogueira', age:  50 },
-];
-console.log(calculateEntry(entrants));
 
 module.exports = { calculateEntry, countEntrants };

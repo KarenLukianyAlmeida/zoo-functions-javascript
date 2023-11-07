@@ -1,13 +1,6 @@
 const data = require('../data/zoo_data');
 
-const isManager = (id) => {
-  const managersIds = data.employees.reduce((acc, curr) => acc.concat(curr.managers), []);
-
-  const managerIdList = Array.from(new Set(managersIds));
-
-  const result = managerIdList.some((managerId) => (managerId === id));
-  return result;
-};
+const isManager = (id) => data.employees.some((employee) => employee.managers.includes(id));
 
 const getRelatedEmployees = (managerId) => {
   const result = isManager(managerId);
@@ -19,5 +12,7 @@ const getRelatedEmployees = (managerId) => {
   }
   throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
 };
+
+console.log(isManager('0e7b460e-acf4-4e17-bcb3-ee472265db83'));
 
 module.exports = { isManager, getRelatedEmployees };
