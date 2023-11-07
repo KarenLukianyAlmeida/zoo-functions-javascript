@@ -1,19 +1,32 @@
 const handlerElephants = require('../src/handlerElephants');
 
 describe('Testes da função HandlerElephants', () => {
-  it('ao chamar a função handlreElephantes sem parametro, retorna undefined', () => {
+  it('1. Ao chamar a função handlreElephantes sem parametro, retorna undefined', () => {
     const actual = handlerElephants();
-    const expected = undefined;
-    expect(actual).toBe(expected);
+    expect(actual).toBeUndefined();
   });
-  it('ao chamar a função handlreElephantes com parametro diferente de string, retorna a mensagem "Parâmetro inválido, é necessário uma string"', () => {
+  it('2. Ao chamar a função handlreElephantes com parametro diferente de string, retorna a mensagem "Parâmetro inválido, é necessário uma string"', () => {
     const actual = handlerElephants(10);
     const expected = 'Parâmetro inválido, é necessário uma string';
     expect(actual).toBe(expected);
   });
-  it('ao chamar a função handlreElephantes com parametro "count", retorna o número inteiro 4', () => {
+  it('3. Ao chamar a função handlreElephantes com parametro "count", retorna o número inteiro 4', () => {
     const actual = handlerElephants('count');
     const expected = 4;
     expect(actual).toBe(expected);
+  });
+  it('4. Ao chamar a função handlreElephantes com parametro "names", deve retornar um array de nomes que possua o nome "Jefferson"', () => {
+    const actual = handlerElephants('names');
+    const expected = 'Jefferson';
+    expect(actual).toContain(expected);
+  });
+  it('5. Ao chamar a função handlreElephantes com parametro "averageAge", deve retornar o valor 10.5', () => {
+    const actual = handlerElephants('averageAge');
+    const expected = 10.5;
+    expect(actual).toBe(expected);
+  });
+  it('6. Ao chamar a função handlreElephantes com parametro "name", deve retornar null', () => {
+    const actual = handlerElephants('averageAge');
+    expect(actual).toBeNull();
   });
 });
