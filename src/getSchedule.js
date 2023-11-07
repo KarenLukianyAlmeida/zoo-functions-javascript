@@ -42,9 +42,7 @@ const getSchedule = (scheduleTarget) => {
     return result;
   }
 
-  if (!scheduleTarget || !weekDays.includes(scheduleTarget) || !animals.includes(scheduleTarget)) {
-    return setCompleteSchedule(weekDays);
-  }
+  return setCompleteSchedule(weekDays);
 };
 
 module.exports = getSchedule;
