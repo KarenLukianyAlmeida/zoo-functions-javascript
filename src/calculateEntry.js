@@ -22,13 +22,8 @@ const calculateEntry = (entrants) => {
   let sum = 0;
 
   categorysOfEntarnts.forEach((category) => {
-    if (category === 'child') {
-      sum += (categorys[category] * data.prices.child);
-    } else if (category === 'adult') {
-      sum += (categorys[category] * data.prices.adult);
-    } else {
-      sum += (categorys[category] * data.prices.senior);
-    }
+    const price = data.prices[category];
+    sum += (categorys[category] * price);
   });
 
   return Number(sum.toFixed(2));
