@@ -45,4 +45,6 @@ const getSchedule = (scheduleTarget) => {
   return setCompleteSchedule(weekDays);
 };
 
+console.log(getSchedule('penguins'));
+
 module.exports = getSchedule;
