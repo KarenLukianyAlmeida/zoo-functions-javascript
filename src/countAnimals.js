@@ -13,4 +13,6 @@ const countAnimals = (animal = {}) => {
   return completeList[animal.species];
 };
 
+console.log(countAnimals({ species: 'penguins' }));
+
 module.exports = countAnimals;

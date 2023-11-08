@@ -13,45 +13,41 @@ const getSpecies = (speciesInfo) => {
   };
 };
 
-const getEmployeesCoverage = (infoEmployee) => {
-  const listOfFirstName = data.employees.map((employee) => employee.firstName);
-  const listOfLastName = data.employees.map((employee) => employee.lastName);
-  const listOfId = data.employees.map((employee) => employee.id);
+const setReport = () => data.employees.map((employee) => {
+  const speciesInfo = getSpecies(employee.responsibleFor);
 
-  if (listOfFirstName.includes(infoEmployee
-    || listOfLastName.includes(infoEmployee)
-    || listOfId.includes(infoEmployee))) {
-      
-  }
+  return {
+    id: employee.id,
+    fullName: `${employee.firstName} ${employee.lastName}`,
+    species: speciesInfo.name,
+    locations: speciesInfo.location,
+  };
+});
+
+const getEmployeesCoverage = (infoEmployee) => {
+  const allEmployees = setReport();
 
   if (!infoEmployee) {
-    const allEmployees = data.employees.map((employee) => {
-      const speciesInfo = getSpecies(employee.responsibleFor);
-
-      return {
-        id: employee.id,
-        fullName: `${employee.firstName} ${employee.lastName}`,
-        species: speciesInfo.name,
-        locations: speciesInfo.location,
-      }
-    });
     return allEmployees;
   }
 
-  const findEmployeeByName = data.employees
-    .find((employee) => (employee.firstName === infoEmployee
-      || employee.lastName === infoEmployee));
+  if (infoEmployee.name) {
+    const correctData = allEmployees.find((employee) => (employee.fullName
+      .split(' ')
+      .includes(infoEmployee.name)));
 
-  const findEmployeeById = data.employees
-    .find((employee) => (employee.id === infoEmployee));
-
-  if (!findEmployeeByName || !findEmployeeById) {
-
+    if (correctData) {
+      return correctData;
+    }
+    throw new Error('Informações inválidas');
   }
 
+  const correctData = allEmployees.find((employee) => (employee.id.includes(infoEmployee.id)));
+
+  if (correctData) {
+    return correctData;
+  }
   throw new Error('Informações inválidas');
 };
-
-console.log(getEmployeesCoverage());
 
 module.exports = getEmployeesCoverage;
