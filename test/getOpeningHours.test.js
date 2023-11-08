@@ -20,4 +20,10 @@ describe('Testes da função getOpeningHours', () => {
     const expected = 'The zoo is closed';
     expect(actual).toMatch(expected);
   });
+
+  it('3. Para os argumentos Tuesday e 09:00-AM deve retornar a string "The zoo is open"', () => {
+    const actual = getOpeningHours('Tuesday', '09:00-AM');
+    const expected = 'The zoo is open';
+    expect(actual).toMatch(expected);
+  });
 });
