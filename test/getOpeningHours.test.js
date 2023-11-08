@@ -32,4 +32,9 @@ describe('Testes da função getOpeningHours', () => {
     const expected = 'The zoo is closed';
     expect(actual).toMatch(expected);
   });
+
+  it('5. Para os argumentos Thu e 09:00-AM deve lançar uma exceção com a mensagem: "The day must be valid. Example: Monday"', () => {
+    const expected = 'The day must be valid. Example: Monday';
+    expect(() => getOpeningHours('Thu', '09:00-AM')).toThrow(expected);
+  })
 });
