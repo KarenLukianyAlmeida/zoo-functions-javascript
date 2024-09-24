@@ -1,7 +1,9 @@
 
 # What was developed
 
-This project aimed to develop an API that manages sales and products in a store system using CRUD operations. The MySQL database was used.
+This project simulates a zoo report system. The system contains information about the animals in the zoo, employees, operating hours, and a price table that varies according to the visitors' ages.
+
+The system includes a set of functions capable of retrieving various information about the zoo and its operation, using JavaScript concepts.
 
 ## Technologies
 
@@ -35,7 +37,11 @@ This project aimed to develop an API that manages sales and products in a store 
   > ```bash
   > npm test
   > ```
-  >     
+  > 
+  > To check the test coverage, run the command below:
+  > ```bash
+  > npm run test:coverage
+  > ```       
 
 </details>
 
