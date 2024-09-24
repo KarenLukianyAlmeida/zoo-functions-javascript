@@ -11,13 +11,32 @@ The system includes a set of functions capable of retrieving various information
 
 ## Skills Developed
 
-- __Interacting with MySQL:__ Gained proficiency in interacting with a relational database using ***MySQL***.
+- Enhanced my use of variables in JavaScript, distinguishing when to use **let** and **const**.
   
-- __Layered Architecture Implementation:__ Organized the project using the MVC (Model-View-Controller) architecture to ensure clean and maintainable code.
+- Used __arrow functions__ to create functions in a more concise and readable manner.
   
-- __Data Validation:__ Implemented robust data validation techniques to ensure the integrity of information received by the API.
+- Applied __template literals__ to build strings more efficiently and clearly, allowing the inclusion of expressions.
   
-- __API Testing:__ Wrote comprehensive tests to validate the functionality of API endpoints, ensuring reliable and error-free operations. ___Mocha, Sinon, and Chai___ were used.
+- Practiced using the __spread operator__ to copy and combine arrays and objects.
+
+- Utilized the __rest parameter__ to handle an indefinite number of arguments in functions.
+  
+- Implemented __object destructuring__ to extract values directly from objects.
+  
+- Used __array destructuring__ to access elements directly from arrays in a simpler way.
+  
+- Applied __default destructuring__ to set default values when destructuring objects and arrays.
+  
+- Practiced __abbreviated object__ literal syntax when creating objects whose properties have the same names as the variables.
+  
+- Used __default parameters__ to define default values in functions, ensuring predictable behavior when values are not provided.
+  
+- Worked with __higher-order functions__ to manipulate and transform arrays functionally.
+
+- __Applied Test Driven Development (TDD)__ principles.
+  
+- Wrote tests using **Jest** to validate the functionality of the project's functions.
+
 
 ## Features
 
