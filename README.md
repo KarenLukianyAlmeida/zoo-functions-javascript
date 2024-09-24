@@ -11,41 +11,32 @@ The system includes a set of functions capable of retrieving various information
 
 ## Skills Developed
 
-- __Applied Test Driven Development (TDD)__ principles.
-  
-- Wrote tests using **Jest** to validate the functionality of the project's functions.
+<details>
+  <summary><strong>JavaScript concepts and new features of ES6</strong></summary><br />
 
-- Enhanced my use of variables in JavaScript, distinguishing when to use **let** and **const**.
+>   1. arrow functions
+>   2. template literals
+>   3. spread operator
+>   4. rest parameter
+>   5. object destructuring
+>   6. array destructuring
+>   7. default destructuring
+>   8. abbreviated object
+>   9. default parameters
+>   10. higher-order functions
+>   11. let and const
   
-- Used __arrow functions__ to create functions in a more concise and readable manner.
-  
-- Applied __template literals__ to build strings more efficiently and clearly, allowing the inclusion of expressions.
-  
-- Practiced using the __spread operator__ to copy and combine arrays and objects.
+</details>
 
-- Utilized the __rest parameter__ to handle an indefinite number of arguments in functions.
-  
-- Implemented __object destructuring__ to extract values directly from objects.
-  
-- Used __array destructuring__ to access elements directly from arrays in a simpler way.
-  
-- Applied __default destructuring__ to set default values when destructuring objects and arrays.
-  
-- Practiced __abbreviated object__ literal syntax when creating objects whose properties have the same names as the variables.
-  
-- Used __default parameters__ to define default values in functions, ensuring predictable behavior when values are not provided.
-  
-- Worked with __higher-order functions__ to manipulate and transform arrays functionally.
+>   1. Test Driven Development (TDD)
+>   2. Jest
 
 ## Features
 
-<details>
-  <summary><strong>Endpoints</strong></summary><br />
-
-  > I developed the tests that are in the `test` directory.
-  >
-  > The functions I implemented are in the `src` directory. They are:
-  > 1. `getSpeciesByIds`
+> I developed the tests that are in the `test` directory.
+>
+> The functions I implemented are in the `src` directory. They are:
+> 1. `getSpeciesByIds`
 >   2. `getAnimalsOlderThan`
 >   3. `getEmployeeByName`
 >   4. `getRelatedEmployees`
@@ -55,8 +46,6 @@ The system includes a set of functions capable of retrieving various information
 >   8. `getOldestFromFirstSpecies`
 >   9. `getEmployeesCoverage`
 >   10. `getAnimalMap`
-  
-</details>
 
 <details>
   <summary><strong>Tests</strong></summary><br />
