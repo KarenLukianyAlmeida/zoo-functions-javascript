@@ -11,6 +11,10 @@ The system includes a set of functions capable of retrieving various information
 
 ## Skills Developed
 
+- __Applied Test Driven Development (TDD)__ principles.
+  
+- Wrote tests using **Jest** to validate the functionality of the project's functions.
+
 - Enhanced my use of variables in JavaScript, distinguishing when to use **let** and **const**.
   
 - Used __arrow functions__ to create functions in a more concise and readable manner.
@@ -33,16 +37,24 @@ The system includes a set of functions capable of retrieving various information
   
 - Worked with __higher-order functions__ to manipulate and transform arrays functionally.
 
-- __Applied Test Driven Development (TDD)__ principles.
-  
-- Wrote tests using **Jest** to validate the functionality of the project's functions.
-
-
 ## Features
 
 <details>
   <summary><strong>Endpoints</strong></summary><br />
 
+  > I developed the tests that are in the `test` directory.
+  >
+  > The functions I implemented are in the `src` directory. They are:
+  > 1. `getSpeciesByIds`
+>   2. `getAnimalsOlderThan`
+>   3. `getEmployeeByName`
+>   4. `getRelatedEmployees`
+>   5. `countAnimals`
+>   6. `calculateEntry`
+>   7. `getSchedule`
+>   8. `getOldestFromFirstSpecies`
+>   9. `getEmployeesCoverage`
+>   10. `getAnimalMap`
   
 </details>
 
